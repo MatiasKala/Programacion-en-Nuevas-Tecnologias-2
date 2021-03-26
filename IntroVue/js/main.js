@@ -8,7 +8,13 @@
         contador:123,
         contador2:456,
         contador3:789,
-        mostrar:true
+        mostrar:true,
+        mostrar2:true,
+        usuarios:[
+            'Pedro',
+            'Juan',
+            'Mati'
+            ]
 
     },
     methods:{
