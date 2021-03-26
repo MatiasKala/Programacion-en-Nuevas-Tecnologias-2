@@ -37,8 +37,22 @@
             <button class="btn btn-warning my-3" @click="contador2++">Contar {{contador2}}</button>
             <button class="btn btn-danger my-3" @click="incrementar()">Contar {{getContador()}}</button>
 
-            <h4></h4>
+            <h4><u>Double Data Binding / v-model</u></h4>
+            <h5>Manual</h5>
+            <input type="text" :value="valor2" @input="actualizar($event)"> {{valor2}} <br>
+            <br>
+            <h5>Automatico</h5>
+            <input type="text" v-model="valor3">{{valor3}} <br>
+            <hr>
+            <h4><u>v-if</u></h4>
+            <button class="btn btn-warning my-3" @click="mostrar=!mostrar">
+                {{mostrar?'Ocultar':'Mostrar'}}
+            </button>
 
+            <p v-if="mostrar" class="alert alert-warning">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta ea praesentium, fugiat amet aperiam corrupti iure molestias vero? Eius dolore, error odio quibusdam recusandae enim? Enim dolores accusantium amet facere!</p>
+
+            <p v-else class="alert alert-danger">ELEMENTO REMOVIDO</p>
+            
         </div>
     
         </div>
