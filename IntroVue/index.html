@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo</title>
+    <!-- CSS only -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <div id="app" class="container-fluid mt-3">
+      
+      
+        <div class="jumbotron">
+            
+            <h1><i>Bienvenidos  Vue.js</i></h1>
+            <hr>
+            <h4><u>Interpolacion / v-text / v-html</u></h4>
+            <b>{{3 + 4}}</b>
+            <div>{{mensaje}}</div>
+            <div v-text="mensaje"></div>
+            <div v-html="mensaje"></div>
+            <hr>
+
+            <h4>Property Binding /v-bind</h4>
+            <input type="text" value="123"> <br>
+            <input type="text" value="valor"> <br>
+            <input type="text" v-bind:value="valor"> {{valor}} <br>
+            <input type="text" :value="valor"> {{valor}} <br>
+
+
+            <h4><u>Event Binding /v-on</u></h4>
+            <button class="btn btn-success my-3" v-on:click="contador++">Contar {{contador}}</button>
+            <button class="btn btn-warning my-3" @click="contador2++">Contar {{contador2}}</button>
+            <button class="btn btn-danger my-3" @click="incrementar()">Contar {{getContador()}}</button>
+
+            <h4></h4>
+
+        </div>
+    
+        </div>
+    
+    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
