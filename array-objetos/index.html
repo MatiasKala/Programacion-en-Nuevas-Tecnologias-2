@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de datos en Javascript</title>
+</head>
+<body>
+    
+    <script>
+        var numero = -123.45
+        console.log(numero, typeof numero, Array.isArray(numero)? 'Soy un array':'No soy un array')
+
+        var booleana = true
+        console.log(booleana, typeof booleana, Array.isArray(booleana)? 'Soy un array':'No soy un array')
+
+        var mensaje = 'Hola'
+        console.log(mensaje, typeof mensaje, Array.isArray(mensaje)? 'Soy un array':'No soy un array')
+
+        var indefinida
+        console.log(indefinida, typeof indefinida, Array.isArray(indefinida)? 'Soy un array':'No soy un array')
+
+        /* -------------------- */
+        /*        ARRAY         */
+        /* -------------------- */
+        /* array homogéneo */
+        var arrayNumeros = [10,11,12,13,14,15]
+        console.log(arrayNumeros, typeof arrayNumeros, Array.isArray(arrayNumeros)? 'Soy un array':'No soy un array')
+
+        /* array heterogéneo */
+        var arrayPersona = ['Juan','Perez',32]
+        console.log(arrayPersona, typeof arrayPersona, Array.isArray(arrayPersona)? 'Soy un array':'No soy un array')
+
+        // Mostrar la información de un array usando el índice a sus elementos
+        console.log('La persona se llama ' + arrayPersona[0] + ' ' + arrayPersona[1] + ' y tiene ' + 
+        arrayPersona[2] + ' años.' )
+
+        arrayNumeros2 = [1,2,3,4,5]
+        console.log(arrayNumeros2)
+        arrayNumeros2[arrayNumeros2.length] = arrayNumeros2.length + 1
+        console.log(arrayNumeros2)
+        arrayNumeros2[11] = 11
+        console.log(arrayNumeros2)
+
+        var numAleatorios = []
+        for(var i=0; i<5; i++) {
+            numAleatorios[i] = Math.random()    //0 - 0.999999999999
+        }
+        console.log(numAleatorios)
+
+        var array = ['a','b','c']
+        console.log(array)
+
+        /* -------------------- */
+        /*        OBJECT        */
+        /* -------------------- */
+        var objetoPersona = { nombre : 'Juan', apellido: 'Perez', edad: 32 }
+        console.log(objetoPersona, typeof objetoPersona, Array.isArray(objetoPersona)? 'Soy un array':'No soy un array')
+
+        // Mostrar la información de un objeto usando la notación punto
+        console.log('La persona se llama ' + objetoPersona.nombre + ' ' + objetoPersona.apellido + ' y tiene ' + 
+        objetoPersona.edad + ' años.' )
+
+        // Mostrar la información de un objeto usando la notación corchete
+        console.log('La persona se llama ' + objetoPersona['nombre'] + ' ' + objetoPersona['apellido'] + ' y tiene ' + 
+        objetoPersona['edad'] + ' años.' )
+
+        var objeto = { 0: 'a', 1: 'b', 2: 'c' }
+        console.log(objeto)
+
+        var objeto2 = {}
+        objeto2.nombre = 'Pedro'
+        objeto2.edad = 23
+        objeto2['apellido'] = 'Perez'
+        console.log(objeto2)
+
+        delete objeto2.nombre
+        console.log(objeto2)
+
+        /* -------------------- */
+        /*     OBJECT ARRAY     */
+        /* -------------------- */
+        var clientes = [
+            { nombre: 'Juan', apellido: 'Perez', edad: 23},
+            { nombre: 'Pedro', apellido: 'Gomez', edad: 22},
+            { nombre: 'Ana', apellido: 'Mei', edad: 24},
+            { nombre: 'María', apellido: 'Blanco', edad: 21}
+        ]
+        console.log(clientes)
+
+        console.log('\n/* ----- Ciclo For ------- */')
+        for(var cliente=0; cliente<clientes.length; cliente++) {
+            /* sintaxis punto */
+            /* console.log(
+                'El cliente se llama ' + clientes[cliente].nombre + ' ' + clientes[cliente].apellido + 
+                ' y tiene ' + clientes[cliente].edad + ' años.'
+            ) */
+            /* sintaxis corchete */
+            console.log(
+                'El cliente se llama ' + clientes[cliente]['nombre'] + ' ' + clientes[cliente]['apellido'] + 
+                ' y tiene ' + clientes[cliente]['edad'] + ' años.'
+            )
+        }
+
+        console.log('\n/* ----- Ciclo forEach ------- */')
+        clientes.forEach(function(cliente) {
+            console.log(
+                'El cliente se llama ' + cliente.nombre + ' ' + cliente.apellido + 
+                ' y tiene ' + cliente.edad + ' años.'
+            )
+        })
+
+        console.log('\n/* ----- Ciclo for of ------- */')
+        for(var cliente of clientes) {
+            console.log(
+                'El cliente se llama ' + cliente.nombre + ' ' + cliente.apellido + 
+                ' y tiene ' + cliente.edad + ' años.'
+            )
+        }
+
+        console.log('\n')
+
+        /* -------------------- */
+        /*     OBJECT OBJECT    */
+        /* -------------------- */
+        var clientes2 = {
+            '#cliente 1': { nombre: 'Juan', apellido: 'Perez', edad: 23},
+            '#cliente 2': { nombre: 'Pedro', apellido: 'Gomez', edad: 22},
+            '#cliente 3': { nombre: 'Ana', apellido: 'Mei', edad: 24},
+            '#cliente 4': { nombre: 'María', apellido: 'Blanco', edad: 21}
+        }
+        console.log(clientes2)
+
+        console.log('\n/* ----- Ciclo for in ------- */')
+        for(var clave in clientes2) {
+            //console.log(clave)
+            let cliente2 = clientes2[clave]
+            console.log(
+                'El cliente se llama ' + cliente2.nombre + ' ' + cliente2.apellido + 
+                ' y tiene ' + cliente2.edad + ' años.'
+            )
+        }
+
+    </script>
+
+</body>
+</html>
