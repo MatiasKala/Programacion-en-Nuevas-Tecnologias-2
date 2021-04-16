@@ -13,3 +13,7 @@ h5 {
 hr {
     background-color: #bbb;
 }
+
+.table td, .table th {
+    vertical-align: middle;
+}
