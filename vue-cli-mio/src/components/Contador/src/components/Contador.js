@@ -19,8 +19,8 @@ export default {
       this.cont++
     },
    getColorBoton() {
-      if(this.color) return 'btn-'+this.color
-      else return 'btn-primary'
+      if(this.color) return 'is-'+this.color
+      else return 'is-primary'
     }
   }
 }

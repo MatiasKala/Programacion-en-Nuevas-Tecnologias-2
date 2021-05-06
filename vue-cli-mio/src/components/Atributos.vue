@@ -1,7 +1,7 @@
 <template >
 
   <section class="src-components-estructura">
-    <div class="jumbotron">
+    <div class="jumbotron notification is-link">
       <h2>Componente Atributos</h2>
       <hr>
       <br>
@@ -20,6 +20,7 @@
 
       <!-- ----------------------------------- -->
       <hr>
+
       <h5>:class</h5>
       
       <button class="btn btn-info my-3" @click="estado2=!estado2">Cambiar fondo</button>

@@ -5,6 +5,7 @@ import 'jquery'
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'popper.js'
+import 'bulma/css/bulma.css'
 
 Vue.config.productionTip = false
 
