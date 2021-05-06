@@ -1,4 +1,4 @@
-console.log(document.querySelector('title').textContent)
+// console.log(document.querySelector('title').textContent)
 
 /* ----------------------------------------------------- */
 /*       VARIABLES Y TIPO DE DATOS EN JAVASCRIPT         */
