@@ -1,30 +1,34 @@
 <template>
   <div id="app" class="container-fluid mt-3" >
     <div class="jumbotron">
-    <h1>Bienvenidos a Vue.Js CLI</h1>
+    <h1 style="font-size:30px">Bienvenidos a Vue.Js CLI</h1>
     <br> 
-    <Binding />
+    <Navbar/>
+    <router-view></router-view>
+    <!-- <Binding />
     <Estructura />
     <Atributos />
-    <Contadores/>
+    <Contadores/> -->
 
     </div>
   </div>
 </template>
 
 <script>
-import Binding from './components/Binding.vue'
-import Estructura from './components/Estructura.vue'
-import Atributos from './components/Atributos.vue'
-import Contadores from './components/Contadores.vue'
+// import Binding from './components/Binding.vue'
+// import Estructura from './components/Estructura.vue'
+// import Atributos from './components/Atributos.vue'
+// import Contadores from './components/Contadores.vue'
+import Navbar from './components/Navbar.vue'
 
 export default {
   name: 'App',
   components: {
-    Binding,
-    Estructura,
-    Atributos,
-    Contadores
+    // Binding,
+    // Estructura,
+    // Atributos,
+    // Contadores,
+    Navbar
   }
 }
 </script>
