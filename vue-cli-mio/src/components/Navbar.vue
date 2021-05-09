@@ -29,6 +29,10 @@
                     <router-link to="/binding">
                       <button class="nav-link button" id="binding" href="#">Binding</button>
                     </router-link>
+                    
+                    <router-link to="/formulario">
+                      <button class="nav-link button is-link" id="formulario" href="#">Formulario</button>
+                    </router-link>
 
                   </div>
                 </article>
@@ -55,7 +59,7 @@
     },
     data () {
       return {
-        mostrar:true,
+        mostrar:false ,
       }
     },
     methods: {
@@ -75,6 +79,10 @@
     height:117px;
     margin-bottom:20px;
     text-align: center;
+    padding: 0px !important;
+  }
+  .navbar.is-fixed-bottom, .navbar.is-fixed-top{
+    right: unset !important;
   }
   button{
     margin: 10px ;  opacity:1;

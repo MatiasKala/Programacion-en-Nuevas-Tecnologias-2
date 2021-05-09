@@ -1,0 +1,14 @@
+.formulario {
+
+}
+.jumbotron{
+    background-color: rgb(13, 87, 13);
+    color: white;
+  }
+.box{
+    background-color: purple;
+    color: white;
+}
+hr{
+    background-color: #eee;
+}
