@@ -13,9 +13,9 @@
       <div class="block mt-3">
       <progress class="progress is-medium is-success" max="100">45%</progress>
       </div>
-      <span class="tag is-danger is-large">
+      <span class="tag is-danger is-large" v-if="mostrar" >
         Delete Button
-        <button class="delete"></button>
+        <button class="delete" @click="mostrar=!mostrar"></button>
       </span>
     </div>  
     </section>
@@ -37,7 +37,7 @@
     },
     data () {
       return {
-
+        mostrar:true
       }
     },
     methods: {
