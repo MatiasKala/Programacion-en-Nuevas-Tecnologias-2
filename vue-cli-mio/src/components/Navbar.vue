@@ -34,6 +34,10 @@
                       <button class="nav-link button is-link" id="formulario" href="#">Formulario</button>
                     </router-link>
 
+                    <router-link to="/vueformulario">
+                      <button class="nav-link button is-danger" id="vueformulario" href="#">FormularioVue</button>
+                    </router-link>
+
                   </div>
                 </article>
               </li>
@@ -78,6 +82,7 @@
   .navbar {
     height:117px;
     margin-bottom:20px;
+    margin-left:20px;
     text-align: center;
     padding: 0px !important;
   }
@@ -119,6 +124,6 @@
   #estructura{
     background-color: pink;
     color: white ;
-    
+
   }
 </style>

@@ -8,6 +8,7 @@ import 'popper.js'
 import 'bulma/css/bulma.css'
 
 import { router } from './router'
+import './form'
 
 Vue.config.productionTip = false
 

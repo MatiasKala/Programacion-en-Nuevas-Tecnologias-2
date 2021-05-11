@@ -1,0 +1,17 @@
+.formulario {
+
+}
+validate{
+    padding-top: 100px;
+}
+.jumbotron{
+    background-color: rgb(199, 36, 36);
+    color: white;
+  }
+.box{
+    background-color: purple;
+    color: white;
+}
+hr{
+    background-color: #eee;
+}
