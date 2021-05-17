@@ -7,6 +7,7 @@ import Atributos from './components/Atributos.vue'
 import Contadores from './components/Contadores.vue'
 import Formulario from './components/Formulario/index.vue'
 import VueFormulario from './components/VueFormulario/index.vue'
+import Http from './components/Http.vue'
 
 Vue.use(VueRouter)
 
@@ -20,5 +21,6 @@ export const router=new VueRouter({
         {path:'/estructura',component: Estructura},
         {path:'/formulario',component: Formulario },
         {path:'/vueformulario',component: VueFormulario },
+        {path:'/http',component: Http },
     ]
 })

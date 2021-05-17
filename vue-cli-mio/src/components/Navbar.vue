@@ -38,6 +38,10 @@
                       <button class="nav-link button is-danger" id="vueformulario" href="#">FormularioVue</button>
                     </router-link>
 
+                    <router-link to="/http">
+                      <button class="nav-link button is-warning" id="http" href="#">HTTP</button>
+                    </router-link>
+
                   </div>
                 </article>
               </li>
@@ -78,10 +82,12 @@
 </script>
 
 <style scoped lang="css">
-  a {text-decoration: none !important}
+  a {
+    text-decoration: none !important
+  }
   .navbar {
     height:117px;
-    margin-bottom:20px;
+    margin-bottom:40px;
     margin-left:20px;
     text-align: center;
     padding: 0px !important;
