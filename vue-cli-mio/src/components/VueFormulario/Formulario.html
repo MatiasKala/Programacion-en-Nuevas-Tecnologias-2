@@ -19,11 +19,11 @@
          autocomplete="off"
          :minlength="nombreMinLength"
          :maxlength="nombreMaxLength"
-         tiene-espacios
+         no-espacios
         >
         <field-messages name="nombre" show="$dirty">
           <div slot="required" class="alert alert-danger mt-1">Campo requerido</div>
-          <div slot="!tiene-espacios" class="alert alert-danger mt-1">
+          <div slot="no-espacios" class="alert alert-danger mt-1">
             No se permiten espacios intermedios en el campo
           </div>
           <div slot="minlength" class="alert alert-danger mt-1">

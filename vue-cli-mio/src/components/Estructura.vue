@@ -142,7 +142,7 @@
 
 </template>
 
-<script lang="js">
+<script>
 
   export default  {
     name: 'src-components-estructura',
@@ -203,9 +203,9 @@
 </script>
 
 <style scoped lang="css">
-  .src-components-estructura {
+  /* .src-components-estructura {
 
-  }
+  } */
 
   .jumbotron{
     background-color: pink;

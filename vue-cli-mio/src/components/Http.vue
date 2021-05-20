@@ -5,19 +5,16 @@
       <h2>Componente Http</h2>
       <hr>
       <br>
-      <div class="button is-danger" @click="getPostsCb()">Pedir</div>
+      <div class="button is-danger" @click="getPostsCb()">PedirCallback</div>
       <!-- <pre>{{posts}}</pre> -->
       <hr>
-      <div class="table-container">
+      <div  v-if="posts.length" class="table-container ">
         <table class="table table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
           <tr >
-            <th>userID</th>
-            <th>ID</th>
-            <th>title</th>
-            <th>body</th>
+            <th v-for="(key,index) in getColumsNames" :key="index">{{key}}</th>
           </tr>
-          <tr>
-            <td></td>
+          <tr v-for="(p,index) in posts" :key="index">
+            <td v-for="(colName,i) in getColumsNames" :key="i">{{p[colName]}}</td>
           </tr>
         </table>
       </div>
@@ -26,7 +23,7 @@
 
 </template>
 
-<script lang="js">
+<script>
 
   export default  {
     name: 'src-components-http',
@@ -36,6 +33,7 @@
     },
     data () {
       return {
+        //// https://609dba3e33eed80017957062.mockapi.io/data
         url: 'https://jsonplaceholder.typicode.com/posts',  
         posts:[],
       }
@@ -57,7 +55,7 @@
           this.posts=respuesta
         }
         else {
-          console.error('Error en GET -> status: '+xhr.status);
+          console.error('Error en GET -> status: '+xhr.status)
         }
       })
 
@@ -66,7 +64,9 @@
 
     },
     computed: {
-
+      getColumsNames(){
+        return Object.keys(this.posts[0])
+      }
     }
 }
 
@@ -74,9 +74,9 @@
 </script>
 
 <style scoped lang="css">
-  .src-components-atributos {
+  /* .src-components-atributos {
 
-  }
+  } */
   th{
     background-color: #363636;
     border-color: rgba(112, 112, 112, 0.842);

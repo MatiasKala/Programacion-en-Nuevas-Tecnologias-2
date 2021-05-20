@@ -32,11 +32,11 @@ export default {
   }
 }
 </script>
-z
-<style>
-#app {
 
-}
+<style>
+/*#app {
+
+}*/
 h1{
   color: blue;
 }

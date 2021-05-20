@@ -22,7 +22,7 @@
 
 </template>
 
-<script lang="js">
+<script>
   
   import Contador from './Contador/index.vue'
 

@@ -34,7 +34,7 @@
 
 </template>
 
-<script lang="js">
+<script>
 
   export default  {
     name: 'src-components-atributos',
@@ -77,9 +77,9 @@
 </script>
 
 <style scoped lang="css">
-  .src-components-atributos {
+  /* .src-components-atributos {
 
-  }
+  } */
 
   .jumbotron{
     background-color: cornflowerblue;
