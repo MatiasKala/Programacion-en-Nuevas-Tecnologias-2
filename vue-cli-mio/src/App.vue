@@ -38,7 +38,7 @@ export default {
 
 }*/
 h1{
-  color: blue;
+  color: rgb(44, 0, 88);
 }
 
 .jumbotron{

@@ -14,7 +14,7 @@ Vue.use(VueRouter)
 export const router=new VueRouter({
     mode :'history',
     routes : [
-        {path:'/',redirect:'/contadores'},
+        {path:'/',},
         {path:'/binding',component: Binding},
         {path:'/atributos',component: Atributos},
         {path:'/contadores',component: Contadores},

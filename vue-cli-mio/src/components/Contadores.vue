@@ -52,9 +52,6 @@
 </script>
 
 <style scoped lang="css">
-  .src-components-contadores {
-
-  }
   .jumbotron{
     background-color: black;
     color: lightgray;

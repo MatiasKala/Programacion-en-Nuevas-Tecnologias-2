@@ -6,6 +6,8 @@
       <hr>
       <br>
       <div class="button is-danger" @click="getPostsCb()">PedirCallback</div>
+      <div class="button is-link mx-4" @click="getPostsFetch()">PedirFetch</div>
+      <div class="button is-success" @click="getPostsAxios()">PedirAxios</div>
       <!-- <pre>{{posts}}</pre> -->
       <hr>
       <div  v-if="posts.length" class="table-container ">
@@ -40,27 +42,40 @@
     },
     methods: {
     
-    //Ajax
+      //Ajax
 
-    getPostsCb(){
-      let xhr = new XMLHttpRequest
+      getPostsCb(){
+        let xhr = new XMLHttpRequest
 
-      xhr.open('get',this.url)
+        xhr.open('get',this.url)
 
-      xhr.addEventListener('load',() => {
+        xhr.addEventListener('load',() => {
 
-        if(xhr.status == 200){
-          let respuesta=JSON.parse(xhr.response)
-          console.log(respuesta);
-          this.posts=respuesta
-        }
-        else {
-          console.error('Error en GET -> status: '+xhr.status)
-        }
-      })
+          if(xhr.status == 200){
+            let respuesta=JSON.parse(xhr.response)
+            console.log('CALLBACK',respuesta);
+            this.posts=respuesta
+          }
+          else {
+            console.error('Error en GET -> status: '+xhr.status)
+          }
+        })
 
-      xhr.send()
-    }
+        xhr.addEventListener('error', e => {
+          console.error(`Error XMLHttpRequest ${e}`);
+        })
+
+        xhr.send()
+      },
+      getPostsFetch() {
+        fetch(this.url)
+        .then(datos => datos.json())
+        .then(respuesta => {
+          console.log("FETCH",respuesta)
+          this.posts = respuesta
+          })
+        .catch(error => console.error(error))
+      }
 
     },
     computed: {
