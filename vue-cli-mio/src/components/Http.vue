@@ -67,6 +67,7 @@
 
         xhr.send()
       },
+
       getPostsFetch() {
         fetch(this.url)
         .then(datos => datos.json())
@@ -75,8 +76,16 @@
           this.posts = respuesta
           })
         .catch(error => console.error(error))
-      }
+      },
 
+      getPostsAxios(){
+        this.axios(this.url)
+        .then(respuesta => {
+          console.log("AXIOS",respuesta)
+          this.posts = respuesta.data
+        })
+        .catch(e => console.error(e))
+      },
     },
     computed: {
       getColumsNames(){
