@@ -31,7 +31,7 @@
                     </router-link>
                     
                     <router-link to="/formulario">
-                      <button class="nav-link button is-link" id="formulario" href="#">Formulario</button>
+                      <button class="nav-link button " id="formulario" href="#">Formulario</button>
                     </router-link>
 
                     <router-link to="/vueformulario">
@@ -42,6 +42,9 @@
                       <button class="nav-link button is-warning" id="http" href="#">HTTP</button>
                     </router-link>
 
+                    <router-link to="/api">
+                      <button class="nav-link button is-link " id="api" href="#">ApiRest</button>
+                    </router-link>
                   </div>
                 </article>
               </li>
@@ -130,6 +133,9 @@
   #estructura{
     background-color: pink;
     color: white ;
-
+  }
+  #formulario{
+    background-color: rgb(0, 70, 23);
+    color: white ;
   }
 </style>
