@@ -23,7 +23,6 @@ export default {
     getInitialData(){
       return {
         nombre:"",
-        apellido:"",
         edad:"",
         email:"",
       }

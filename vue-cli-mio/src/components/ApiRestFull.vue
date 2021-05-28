@@ -2,7 +2,7 @@
 
   <section class="api-rest-full">
     <div class="box block my-2">
-      <h2>Componente ApiRestFull</h2>
+      <h2>Componente ApiRestFull {{timer}}</h2>
       <hr>
       <br>
 
@@ -35,12 +35,49 @@
   export default  {
     name: 'api-rest-full',
     props: [],
-    mounted () {
+    //
+    //  Ciclos de vida
+    //
+    beforeCreate () {
+      console.log('Before Created');
+    },    
+    created () {
+      console.log('Created');
+    },    
+    afterCreate () {
+      console.log('After Created');
     },
+    beforeMount () {
+      console.log('Before Mounted');
+    },    
+    mounted () {
+      console.log('Mounted');
+      this.refTimer=setInterval(() =>{
+        this.timer++
+        console.log(this.timer);
+      },1000)
+    },    
+    beforeUpdate () {
+      console.log('Before Updated');
+    },    
+    updated () {
+      console.log('Updated');
+    },    
+    beforeDestroy () {
+      console.log('Before Destroyed');
+    },    
+    destroyed () {
+      console.log('Destroyed');
+      clearInterval(this.refTimer)
+    },    
+
+
     data () {
       return {
         urlUsuarios: 'https://609dba3e33eed80017957062.mockapi.io/users/',
         usuarios:[],
+        timer:0,
+        refTimer: null
      }
     },
     methods: {
@@ -53,8 +90,6 @@
           console.error(e)
         }
       },
-
-
 
       async postUsuario(){
 
@@ -80,8 +115,6 @@
         }
       },
       
-
-
       async putUsuario(id){
         let usuario = {
           nombre: "PEPOTE",
@@ -107,7 +140,6 @@
           console.log(e)
         }
       },
-
 
       async deleteUsuario(id){
         try {
