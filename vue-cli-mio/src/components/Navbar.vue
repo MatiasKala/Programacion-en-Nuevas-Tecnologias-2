@@ -45,6 +45,11 @@
                     <router-link to="/api">
                       <button class="nav-link button is-link " id="api" href="#">ApiRest</button>
                     </router-link>
+
+                    <router-link to="/padre">
+                      <button class="nav-link button " id="padre" href="#">Padre</button>
+                    </router-link>
+
                   </div>
                 </article>
               </li>
@@ -136,6 +141,10 @@
   }
   #formulario{
     background-color: rgb(0, 70, 23);
+    color: white ;
+  }
+  #padre{
+    background-color:  #ff8352;
     color: white ;
   }
 </style>
