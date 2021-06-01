@@ -7,18 +7,18 @@
       <br>
 
 
-      <h4 class="alert alert-success">Contador del Hijo</h4>
+      <h4 class="alert alert-success">Contador del Hijo {{contadorHijo}}</h4>
 
       <button class="btn btn-success mt-1 mb-4" @click="incrementar()">Contador {{cont}}</button>
 
-      <Hijo :contador="cont" />
+      <Hijo :contador="cont" @contadorEvento="contadorHijo=$event"  />
 
     </div>
   </section>
 
 </template>
 
-<script>
+<script >
 
   import Hijo from "./Hijo.vue"
 
@@ -33,7 +33,8 @@
     },
     data () {
       return {
-        cont:0
+        cont:0,
+        contadorHijo:0
       }
     },
     methods: {

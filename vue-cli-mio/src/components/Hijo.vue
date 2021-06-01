@@ -16,7 +16,7 @@
 
 </template>
 
-<script lang="js">
+<script>
 
   export default  {
     name: 'hijo',
@@ -32,8 +32,9 @@
     methods: {
       incrementar(){
         this.cont++
+        this.$emit('contadorEvento',this.cont)
       }
-    },
+    }, 
     computed: {
 
     }

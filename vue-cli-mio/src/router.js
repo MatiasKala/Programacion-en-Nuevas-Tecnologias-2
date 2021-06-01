@@ -10,7 +10,7 @@ import VueFormulario from './components/VueFormulario/index.vue'
 import Http from './components/Http.vue'
 import ApiRestFull from './components/ApiRestFull.vue'
 import Padre from './components/Padre.vue'
-import Hijo from './components/Hijo.vue'
+import ContadorVuex from './components/ContadorVuex.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +27,6 @@ export const router=new VueRouter({
         {path:'/api',component: ApiRestFull },
         {path:'/http',component: Http },
         {path:'/padre',component: Padre },
-        {path:'/hijo',component: Hijo },
+        {path:'/contador-vuex',component: ContadorVuex },
     ]
 })

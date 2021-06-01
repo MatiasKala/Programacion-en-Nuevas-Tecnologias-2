@@ -3,51 +3,55 @@
     
     <div class="columns"> 
       <div class="column">
-        <nav class="navbar is-centered is-fixed-bottom " v-if="mostrar">
+        <nav class="navbar is-centered is-fixed-bottom  " v-if="mostrar">
           <div class="navbar-start">
             <ul>
               <li class="nav-item">
                 <article class="message is-small is-primary  ">
                   <div class="message-header">NavBar</div>
-                  <div class="message-body buttons is-left ">
+                  <div class="message-body buttons are-small is-left ">
                     <router-link to="/">
-                      <button class="nav-link button is-success is-focused" href="#">Inicio</button>
+                      <button class="nav-link is-rounded button is-success is-focused" href="#">Inicio</button>
                     </router-link>
 
                     <router-link to="/estructura">
-                      <button class="nav-link button" id="estructura" href="#">Estructura</button>
+                      <button class="nav-link is-rounded button" id="estructura" href="#">Estructura</button>
                     </router-link>
 
                     <router-link to="/atributos">
-                      <button class="nav-link button" id="atributos" href="#">Atributos</button>
+                      <button class="nav-link is-rounded button" id="atributos" href="#">Atributos</button>
                     </router-link>
 
                     <router-link to="/contadores">
-                      <button class="nav-link button" id="contadores" href="#">Contadores</button>
+                      <button class="nav-link is-rounded button" id="contadores" href="#">Contadores</button>
                     </router-link>
                    
                     <router-link to="/binding">
-                      <button class="nav-link button" id="binding" href="#">Binding</button>
+                      <button class="nav-link is-rounded button" id="binding" href="#">Binding</button>
                     </router-link>
                     
                     <router-link to="/formulario">
-                      <button class="nav-link button " id="formulario" href="#">Formulario</button>
+                      <button class="nav-link is-rounded button " id="formulario" href="#">Formulario</button>
                     </router-link>
 
                     <router-link to="/vueformulario">
-                      <button class="nav-link button is-danger" id="vueformulario" href="#">FormularioVue</button>
+                      <button class="nav-link is-rounded button is-danger" id="vueformulario" href="#">FormularioVue</button>
                     </router-link>
 
                     <router-link to="/http">
-                      <button class="nav-link button is-warning" id="http" href="#">HTTP</button>
+                      <button class="nav-link is-rounded button is-warning" id="http" href="#">HTTP</button>
                     </router-link>
 
                     <router-link to="/api">
-                      <button class="nav-link button is-link " id="api" href="#">ApiRest</button>
+                      <button class="nav-link is-rounded button is-link " id="api" href="#">ApiRest</button>
                     </router-link>
 
                     <router-link to="/padre">
-                      <button class="nav-link button " id="padre" href="#">Padre</button>
+                      <button class="nav-link is-rounded button " id="padre" href="#">Padre</button>
+                    </router-link>
+
+                    <router-link to="/contador-Vuex">
+                      <button class="nav-link is-rounded button " id="contadorVuex" href="#">ContadorVuex</button>
                     </router-link>
 
                   </div>
@@ -94,7 +98,7 @@
     text-decoration: none !important
   }
   .navbar {
-    height:117px;
+    height:90px;
     margin-bottom:40px;
     margin-left:20px;
     text-align: center;
@@ -104,7 +108,7 @@
     right: unset !important;
   }
   button{
-    margin: 10px ;  opacity:1;
+    margin-right: 15px ;  opacity:1;
   }
   button:hover{
     animation: bounce 0.39s;
@@ -145,6 +149,10 @@
   }
   #padre{
     background-color:  #ff8352;
+    color: white ;
+  }
+  #contadorVuex{
+    background-color:  #942a00;
     color: white ;
   }
 </style>
