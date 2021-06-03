@@ -1,9 +1,16 @@
 <template>
   <div id="app" class="container-fluid mt-3" >
     <div class="jumbotron">
-    <h1 style="font-size:30px">Bienvenidos a Vue.Js CLI</h1>
+    <h1 style="font-size:30px">Bienvenidos a Vue.Js CLI </h1>
     <br> 
-    <Navbar/>
+
+    <!-- <ContadorVuex titulo="1" colorDeFondo="crimson" colorDeTexto="white" @contador="leerContador($event)" /> -->
+    <!-- <ContadorVuex titulo="2" colorDeFondo="navy" colorDeTexto="white" @contador="leerContador($event)" /> -->
+
+    <ContadorVuex titulo="1" colorDeFondo="crimson" colorDeTexto="white"  />
+    <ContadorVuex titulo="2" colorDeFondo="navy" colorDeTexto="white"  />
+    
+    <Navbar />
     <router-view></router-view>
     <!-- <Binding />
     <Estructura />
@@ -15,10 +22,8 @@
 </template>
 
 <script>
-// import Binding from './components/Binding.vue'
-// import Estructura from './components/Estructura.vue'
-// import Atributos from './components/Atributos.vue'
-// import Contadores from './components/Contadores.vue'
+
+import ContadorVuex from "./components/ContadorVuex.vue";
 import Navbar from './components/Navbar.vue'
 
 export default {
@@ -28,7 +33,21 @@ export default {
     // Estructura,
     // Atributos,
     // Contadores,
-    Navbar
+    Navbar,
+    ContadorVuex
+  },
+  data(){
+    return {
+      // contador : 0
+    }
+  },
+  methods:{
+    // leerContador(cont){
+    //   this.contador = cont
+    // },
+    // getContador(){
+    //   return this.contador
+    // }
   }
 }
 </script>

@@ -8,7 +8,7 @@
             <ul>
               <li class="nav-item">
                 <article class="message is-small is-primary  ">
-                  <div class="message-header">NavBar</div>
+                  <div class="message-header">NavBar {{mostrarContadorVuex}}</div>
                   <div class="message-body buttons are-small is-left ">
                     <router-link to="/">
                       <button class="nav-link is-rounded button is-success is-focused" href="#">Inicio</button>
@@ -50,7 +50,7 @@
                       <button class="nav-link is-rounded button " id="padre" href="#">Padre</button>
                     </router-link>
 
-                    <router-link to="/contador-Vuex">
+                    <router-link to="/contador-Vuex/3/purple/whitesmoke/">
                       <button class="nav-link is-rounded button " id="contadorVuex" href="#">ContadorVuex</button>
                     </router-link>
 
@@ -86,7 +86,11 @@
 
     },
     computed: {
-
+      mostrarContadorVuex(){
+        // this.$emit('contador',this.contador)
+        // return this.contador
+        return this.$store.state.contador
+      }
     }
 }
 

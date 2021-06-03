@@ -27,6 +27,6 @@ export const router=new VueRouter({
         {path:'/api',component: ApiRestFull },
         {path:'/http',component: Http },
         {path:'/padre',component: Padre },
-        {path:'/contador-vuex',component: ContadorVuex },
+        {path:'/contador-vuex/:titulo/:colorDeFondo/:colorDeTexto',component: ContadorVuex,props:true },
     ]
 })

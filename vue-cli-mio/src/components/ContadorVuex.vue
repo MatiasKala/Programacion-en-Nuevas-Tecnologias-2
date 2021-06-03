@@ -1,16 +1,15 @@
 <template>
 
   <section class="contadorVuex">
-    <div class="jumbotron ">
-      <h2>Componente ContadorVuex</h2>
+    <div class="jumbotron" :style="{background: colorDeFondo, color:colorDeTexto}">
+      <h2>Componente ContadorVuex {{titulo}}</h2>
       <hr>
       <br>
 
       
-      <h4>Contador  {{contador}}</h4>
-      <hr>
-      <button class="btn btn-dark my-2 mr-3" @click="incrementar()">Incrementar </button>
-      <button class="btn btn-dark my-2" @click="decrementar()">Decrementar </button>
+      <h4>Contador  {{mostrarContadorVuex}}</h4>
+      <button class="button is-dark my-2 mr-3" @click="incrementar()">Incrementar </button>
+      <button class="button is-dark my-2" @click="decrementar()">Decrementar </button>
 
     </div>
   </section>
@@ -20,26 +19,37 @@
 <script>
 
   export default  {
-    name: 'contadorVuex',
-    props: [],
+    name: 'ContadorVuex',
+    props: ['titulo','colorDeFondo','colorDeTexto'],
     mounted () {
 
     },
     data () {
       return {
-        contador:0
       }
     },
     methods: {
       incrementar(){
-        this.contador++
+        // this.contador++  
+        // this.$emit('contador',this.contador)
+        let cant = 1
+        console.log('dispatch contarUp')
+        this.$store.dispatch('contarUp',cant)
       },
       decrementar(){
-        this.contador--
+        // this.contador--
+        // this.$emit('contador',this.contador)
+        let cant = 1
+        console.log('dispatch contarDown')
+        this.$store.dispatch('contarDown',cant)
       }
     }, 
     computed: {
-
+      mostrarContadorVuex(){
+        // this.$emit('contador',this.contador)
+        // return this.contador
+        return this.$store.state.contador
+      }
     }
 }
 
