@@ -18,12 +18,15 @@
 
 <script>
 
+  // import {miMixinLocal} from "../localMixins";
+
   export default  {
     name: 'ContadorVuex',
     props: ['titulo','colorDeFondo','colorDeTexto'],
     mounted () {
 
     },
+    // mixins:[miMixinLocal], 
     data () {
       return {
       }
@@ -45,11 +48,12 @@
       }
     }, 
     computed: {
-      mostrarContadorVuex(){
-        // this.$emit('contador',this.contador)
-        // return this.contador
-        return this.$store.state.contador
-      }
+      // mostrarContadorVuex(){
+      //   // this.$emit('contador',this.contador)
+      //   // return this.contador
+      //   console.log('Mostrar Contador VUEX');
+      //   return this.$store.state.contador
+      // }
     }
 }
 

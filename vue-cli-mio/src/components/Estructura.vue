@@ -2,7 +2,7 @@
 
   <section class="src-components-estructura">
     <div class="jumbotron">
-      <h2>Componente Estructura</h2>
+      <h2>Componente Estructura {{mostrarContadorVuex}}</h2>
       <hr>
       <br>
 
@@ -195,7 +195,10 @@
                 todos: cant == this.alumnos.length,
                 uno: cant == 1
             }
-        }
+        },
+        // mostrarContadorVuex(){
+        // return this.$store.state.contador
+        // }
     }
 }
 

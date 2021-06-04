@@ -86,11 +86,11 @@
 
     },
     computed: {
-      mostrarContadorVuex(){
-        // this.$emit('contador',this.contador)
-        // return this.contador
-        return this.$store.state.contador
-      }
+      // mostrarContadorVuex(){
+      //   // this.$emit('contador',this.contador)
+      //   // return this.contador
+      //   return this.$store.state.contador
+      // }
     }
 }
 

@@ -16,6 +16,8 @@ import './form'
 //Trae el axios al proyecto general
 import './httpClient'
 
+import './globalMixins'
+
 import store from './store'
 
 Vue.config.productionTip = false
