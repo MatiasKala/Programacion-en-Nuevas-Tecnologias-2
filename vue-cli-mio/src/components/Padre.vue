@@ -2,7 +2,7 @@
 
   <section class="padre">
     <div class="jumbotron ">
-      <h2>Componente Padre</h2>
+      <h2>Componente {{'Padre' | reverse | pasarAmayus | wrap('"','*')}}</h2>
       <hr>
       <br>
 
@@ -11,7 +11,16 @@
 
       <button class="btn btn-success mt-1 mb-4" @click="incrementar()">Contador {{cont}}</button>
 
-      <Hijo :contador="cont" @contadorEvento="contadorHijo=$event"  />
+      <Hijo :contador="cont" @contadorEvento="contadorHijo=$event"  >
+        <div slot="header"> 
+          <h3>SLOT este es el HEADER</h3>
+        </div>
+        <h5>SLOT MAIN</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur fugit, repudiandae eos voluptatum nisi placeat ullam animi iste. Maiores dolor repellendus animi non quisquam eius impedit corrupti sit culpa iusto!</p>
+        <div slot="footer">
+          <h3>SLOT este es el FOOTER</h3>
+        </div>
+      </Hijo>
 
     </div>
   </section>

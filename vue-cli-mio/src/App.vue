@@ -7,8 +7,8 @@
     <!-- <ContadorVuex titulo="1" colorDeFondo="crimson" colorDeTexto="white" @contador="leerContador($event)" /> -->
     <!-- <ContadorVuex titulo="2" colorDeFondo="navy" colorDeTexto="white" @contador="leerContador($event)" /> -->
 
-    <ContadorVuex titulo="1" colorDeFondo="crimson" colorDeTexto="white"  />
-    <ContadorVuex titulo="2" colorDeFondo="navy" colorDeTexto="white"  />
+    <!--<ContadorVuex titulo="1" colorDeFondo="crimson" colorDeTexto="white"  />
+    <ContadorVuex titulo="2" colorDeFondo="navy" colorDeTexto="white"  /> -->
     
     <Navbar />
     <router-view></router-view>
@@ -23,7 +23,7 @@
 
 <script>
 
-import ContadorVuex from "./components/ContadorVuex.vue";
+// import ContadorVuex from "./components/ContadorVuex.vue";
 import Navbar from './components/Navbar.vue'
 
 export default {
@@ -34,7 +34,7 @@ export default {
     // Atributos,
     // Contadores,
     Navbar,
-    ContadorVuex
+    // ContadorVuex
   },
   data(){
     return {

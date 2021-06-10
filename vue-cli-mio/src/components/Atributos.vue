@@ -29,6 +29,11 @@
       <p :class="getClass(estado2)">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam harum provident quas eos in delectus incidunt at placeat! Non recusandae officia rem id vitae provident illo eaque veritatis assumenda quaerat?
       </p>
+      <br>
+      <hr>
+      <h4 class="mb-2"><u>DIRECTIVAS PERSONALIZADAS</u></h4>
+      <input type="text" v-model="color" v-cambio-color="color">{{color}}
+
     </div>
   </section>
 
@@ -45,7 +50,8 @@
     data () {
       return {
         estado1:true,
-        estado2:true
+        estado2:true,
+        color:''
       }
     },
     methods: {

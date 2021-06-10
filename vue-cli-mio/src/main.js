@@ -17,6 +17,8 @@ import './form'
 import './httpClient'
 
 import './globalMixins'
+import './globalFilters'
+import './directives'
 
 import store from './store'
 

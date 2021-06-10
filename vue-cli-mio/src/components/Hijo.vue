@@ -11,6 +11,25 @@
 
       <button class="btn btn-success mt-1 mb-4" @click="incrementar()">Contador {{cont}}</button>
 
+      <h3>FILTROS LOCALES</h3>
+      <input type="text" v-model="valor">
+      <p>{{valor==''?0:valor}} X 3 = {{valor | por3 | currency}}</p>
+  
+      <br>
+      <hr>
+      <h4><u>SLOTS</u></h4>
+      <br>
+      <header>
+        <slot name="header" ></slot>
+      </header>
+      <br>
+      <main>
+        <slot>...main</slot>
+      </main>
+      <br>
+      <footer>
+        <slot name="footer" ></slot>
+      </footer>
     </div>
   </section>
 
@@ -26,8 +45,13 @@
     },
     data () {
       return {
-        cont:0
+        cont:0,
+        valor:5
       }
+    },
+    filters:{
+      por3:(v)=>{return !isNaN(v)? v*3 : 'La entrada no es valida'},
+      currency:(v)=>{return '$'+v}
     },
     methods: {
       incrementar(){
